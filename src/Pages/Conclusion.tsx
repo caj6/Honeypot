@@ -1,4 +1,5 @@
-import { CheckCircle, AlertTriangle, BarChart3, Target, Database, Shield, Zap, GitBranch } from 'lucide-react';
+// Pages/Conclusion.tsx - Complete with justified executive summary
+import { CheckCircle, AlertTriangle, BarChart3, Target, Database, Shield, Zap, GitBranch, BookOpen, Globe } from 'lucide-react';
 
 export default function Conclusion() {
     return (
@@ -14,6 +15,96 @@ export default function Conclusion() {
                     through systematic scientific methodology.
                 </div>
             </div>
+
+            {/* EXECUTIVE SUMMARY SECTION WITH JUSTIFIED TEXT */}
+            <section className="section">
+                <h2><Target size={20} /> Executive Summary & Final Conclusions</h2>
+
+                <div className="card">
+                    <h3>Comprehensive Project Synthesis</h3>
+
+                    <div className="alert success">
+                        <CheckCircle size={18} />
+                        <div>
+                            <strong>Project Achievement:</strong> This research successfully demonstrates the value of systematic
+                            honeypot deployment for empirical threat intelligence generation, producing validated findings that
+                            contribute to both academic cybersecurity knowledge and practical defense capabilities.
+                        </div>
+                    </div>
+
+                    <div className="conclusion-paragraph text-justify">
+                        <p className="text-justify">
+                            This comprehensive research project has systematically demonstrated the critical role of honeypot
+                            technology in contemporary cybersecurity defense strategies. Through the controlled deployment of
+                            multiple honeypot architectures—including Cowrie for SSH/Telnet interactions, Dionaea for malware
+                            capture, Glastopf for web application threats, and Conpot for ICS protocol monitoring—we have
+                            successfully captured and analyzed over 2.1 million security events during a 45-day observation
+                            period. The empirical data collected provides unprecedented insight into current attack patterns,
+                            revealing that 92.7% of observed attacks were automated, with distinct geographic clustering
+                            originating primarily from China (20.4%), the United States (17.0%), and Russia (11.7%). Our
+                            statistical analysis validated key research hypotheses, confirming that medium-interaction
+                            honeypots capture significantly more sophisticated attack patterns than low-interaction variants
+                            (p = 0.003), and that attack distribution shows non-random geographic clustering (p = 0.012).
+                        </p>
+
+                        <p className="text-justify">
+                            The collection and analysis of 342 malware samples revealed that Mirai variants constitute 58.2%
+                            of captured IoT botnet malware, while our entropy analysis demonstrated that 28.4% of samples 
+              showed high entropy ( &gt; 7.5), indicating likely encryption or packing. These findings provide
+                            actionable intelligence for security practitioners, including 102 novel Indicators of Compromise
+                            (IoCs) that have been shared with the cybersecurity community through established threat
+                            intelligence platforms. The methodological contributions of this research extend beyond the
+                            specific findings; we have developed and documented a reproducible framework for honeypot
+                            deployment and analysis that balances scientific rigor with practical applicability.
+                        </p>
+
+                        <p className="text-justify">
+                            Our infrastructure-as-code approach using Ansible and Docker containers, combined with automated
+                            data processing pipelines and statistical validation methods, provides a template for future
+                            cybersecurity research. The open-source release of deployment scripts, analysis code, and
+                            anonymized datasets ensures that our work contributes to the broader scientific community while
+                            maintaining ethical standards and data privacy compliance. Looking forward, this research
+                            establishes a foundation for several important directions in cybersecurity defense. The
+                            demonstrated effectiveness of medium-interaction honeypots suggests that organizations should
+                            prioritize these systems for threat intelligence collection, while the prevalence of automated
+                            attacks underscores the need for machine learning-enhanced detection systems.
+                        </p>
+
+                        <p className="text-justify">
+                            The identification of novel IoCs and attack patterns provides immediate value for security
+                            operations centers, while the methodological framework offers a model for reproducible
+                            cybersecurity research. As cyber threats continue to evolve in sophistication and scale,
+                            the systematic approach to threat intelligence gathering demonstrated in this project will
+                            become increasingly vital for both academic understanding and practical defense. This research
+                            validates honeypots as essential components of modern cybersecurity architectures, not merely
+                            as detection tools but as intelligence platforms that provide proactive insight into attacker
+                            methodologies.
+                        </p>
+
+                        <p className="text-justify">
+                            By bridging the gap between academic research and practical security operations, this project
+                            contributes to a more scientifically grounded approach to cybersecurity defense—one that is
+                            evidence-based, statistically validated, and focused on continuous improvement through
+                            empirical observation. The findings and methodologies presented here offer both immediate
+                            defensive value and a foundation for future innovation in adaptive cyber defense systems.
+                            Ultimately, this project establishes that systematic honeypot deployment provides validated
+                            threat intelligence that enhances defensive capabilities while advancing scientific understanding
+                            of cyber attack patterns, with reproducible methodology and open datasets ensuring continued
+                            value for both academic research and practical security operations.
+                        </p>
+                    </div>
+
+                    <div className="note mt-6">
+                        <div className="note-content">
+                            <strong>Final Research Contribution:</strong> This project establishes that systematic honeypot
+                            deployment provides validated threat intelligence that enhances defensive capabilities while
+                            advancing scientific understanding of cyber attack patterns. The reproducible methodology
+                            and open datasets ensure continued value for both academic research and practical security
+                            operations.
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section className="section">
                 <h2><BarChart3 size={20} /> Key Findings & Statistical Validation</h2>
@@ -92,29 +183,29 @@ export default function Conclusion() {
                         <div className="card">
                             <h4>Malware Samples</h4>
                             <div className="metric-value">102</div>
-                            <p>Novel variants not in public databases</p>
-                            <div className="badge danger">High Priority</div>
+                            <p className="text-justify small">Novel variants not in public databases</p>
+                            <div className="badge danger mt-2">High Priority</div>
                         </div>
 
                         <div className="card">
                             <h4>Command Patterns</h4>
                             <div className="metric-value">45</div>
-                            <p>New post-exploitation techniques</p>
-                            <div className="badge warning">Medium Priority</div>
+                            <p className="text-justify small">New post-exploitation techniques</p>
+                            <div className="badge warning mt-2">Medium Priority</div>
                         </div>
 
                         <div className="card">
                             <h4>Infrastructure IPs</h4>
                             <div className="metric-value">287</div>
-                            <p>C2 servers and scanning infrastructure</p>
-                            <div className="badge danger">Critical</div>
+                            <p className="text-justify small">C2 servers and scanning infrastructure</p>
+                            <div className="badge danger mt-2">Critical</div>
                         </div>
 
                         <div className="card">
                             <h4>Attack Patterns</h4>
                             <div className="metric-value">18</div>
-                            <p>Novel TTPs mapped to MITRE ATT&CK</p>
-                            <div className="badge info">Research Value</div>
+                            <p className="text-justify small">Novel TTPs mapped to MITRE ATT&CK</p>
+                            <div className="badge info mt-2">Research Value</div>
                         </div>
                     </div>
 
@@ -138,30 +229,30 @@ export default function Conclusion() {
                         <div className="card">
                             <h4>Defense Strategy</h4>
                             <ul className="styled-list">
-                                <li>Implement rate limiting on SSH (max 3 attempts/minute)</li>
-                                <li>Deploy honeypots in DMZ for early warning</li>
-                                <li>Use GeoIP blocking for high-risk regions</li>
-                                <li>Monitor for specific command patterns identified</li>
+                                <li className="text-justify">Implement rate limiting on SSH (max 3 attempts/minute)</li>
+                                <li className="text-justify">Deploy honeypots in DMZ for early warning</li>
+                                <li className="text-justify">Use GeoIP blocking for high-risk regions</li>
+                                <li className="text-justify">Monitor for specific command patterns identified</li>
                             </ul>
                         </div>
 
                         <div className="card">
                             <h4>Monitoring Improvements</h4>
                             <ul className="styled-list">
-                                <li>Add behavioral analytics to SIEM systems</li>
-                                <li>Implement entropy analysis for file uploads</li>
-                                <li>Monitor for ICS protocol anomalies</li>
-                                <li>Use threat intelligence feeds with IoCs from this study</li>
+                                <li className="text-justify">Add behavioral analytics to SIEM systems</li>
+                                <li className="text-justify">Implement entropy analysis for file uploads</li>
+                                <li className="text-justify">Monitor for ICS protocol anomalies</li>
+                                <li className="text-justify">Use threat intelligence feeds with IoCs from this study</li>
                             </ul>
                         </div>
 
                         <div className="card">
                             <h4>Policy Recommendations</h4>
                             <ul className="styled-list">
-                                <li>Update incident response plans with new TTPs</li>
-                                <li>Implement security training on identified threats</li>
-                                <li>Establish threat hunting procedures</li>
-                                <li>Create partnerships for intelligence sharing</li>
+                                <li className="text-justify">Update incident response plans with new TTPs</li>
+                                <li className="text-justify">Implement security training on identified threats</li>
+                                <li className="text-justify">Establish threat hunting procedures</li>
+                                <li className="text-justify">Create partnerships for intelligence sharing</li>
                             </ul>
                         </div>
                     </div>
@@ -186,39 +277,39 @@ export default function Conclusion() {
                         <tbody>
                             <tr>
                                 <td><strong>Sampling Bias</strong></td>
-                                <td>Limited geographic distribution</td>
-                                <td>Multiple deployment locations</td>
-                                <td>Global deployment network</td>
+                                <td className="text-justify">Limited geographic distribution</td>
+                                <td className="text-justify">Multiple deployment locations</td>
+                                <td className="text-justify">Global deployment network</td>
                             </tr>
                             <tr>
                                 <td><strong>Temporal Constraint</strong></td>
-                                <td>45-day observation period</td>
-                                <td>Continuous monitoring</td>
-                                <td>Longitudinal study (1+ year)</td>
+                                <td className="text-justify">45-day observation period</td>
+                                <td className="text-justify">Continuous monitoring</td>
+                                <td className="text-justify">Longitudinal study (1+ year)</td>
                             </tr>
                             <tr>
                                 <td><strong>Honeypot Detection</strong></td>
-                                <td>Sophisticated attackers may avoid</td>
-                                <td>Multiple deception techniques</td>
-                                <td>AI-based adaptive behavior</td>
+                                <td className="text-justify">Sophisticated attackers may avoid</td>
+                                <td className="text-justify">Multiple deception techniques</td>
+                                <td className="text-justify">AI-based adaptive behavior</td>
                             </tr>
                             <tr>
                                 <td><strong>Data Volume</strong></td>
-                                <td>Analysis limited by resources</td>
-                                <td>Sampling and aggregation</td>
-                                <td>Big data infrastructure</td>
+                                <td className="text-justify">Analysis limited by resources</td>
+                                <td className="text-justify">Sampling and aggregation</td>
+                                <td className="text-justify">Big data infrastructure</td>
                             </tr>
                             <tr>
                                 <td><strong>Ethical Constraints</strong></td>
-                                <td>Cannot engage or counterattack</td>
-                                <td>Pure observation</td>
-                                <td>Collaboration with law enforcement</td>
+                                <td className="text-justify">Cannot engage or counterattack</td>
+                                <td className="text-justify">Pure observation</td>
+                                <td className="text-justify">Collaboration with law enforcement</td>
                             </tr>
                         </tbody>
                     </table>
 
                     <div className="note mt-4">
-                        <div className="note-content">
+                        <div className="note-content text-justify">
                             <strong>Generalizability:</strong> While findings are statistically significant within the study context,
                             caution should be exercised when generalizing to different network environments or time periods.
                         </div>
@@ -235,25 +326,25 @@ export default function Conclusion() {
                     <div className="card-grid">
                         <div className="card">
                             <h4>AI-Enhanced Honeypots</h4>
-                            <p>Reinforcement learning for adaptive deception strategies</p>
+                            <p className="text-justify small">Reinforcement learning for adaptive deception strategies</p>
                             <div className="badge info">ML Research</div>
                         </div>
 
                         <div className="card">
                             <h4>Quantum Honeypots</h4>
-                            <p>Detection of quantum computing-based attacks</p>
+                            <p className="text-justify small">Detection of quantum computing-based attacks</p>
                             <div className="badge info">Emerging Tech</div>
                         </div>
 
                         <div className="card">
                             <h4>5G/IoT Focus</h4>
-                            <p>Specialized honeypots for 5G networks and IoT devices</p>
+                            <p className="text-justify small">Specialized honeypots for 5G networks and IoT devices</p>
                             <div className="badge warning">Critical Need</div>
                         </div>
 
                         <div className="card">
                             <h4>Blockchain Integration</h4>
-                            <p>Decentralized honeypot networks with smart contracts</p>
+                            <p className="text-justify small">Decentralized honeypot networks with smart contracts</p>
                             <div className="badge info">Innovation</div>
                         </div>
                     </div>
@@ -308,38 +399,38 @@ export default function Conclusion() {
                         <tbody>
                             <tr>
                                 <td>Research Data</td>
-                                <td>Zenodo Repository</td>
+                                <td className="text-justify">Zenodo Repository</td>
                                 <td>CC BY 4.0</td>
-                                <td>Author (2025). Honeypot Research Dataset</td>
-                                <td>10.5281/zenodo.1234567</td>
+                                <td className="text-justify">Author (2025). Honeypot Research Dataset</td>
+                                <td className="text-justify">10.5281/zenodo.1234567</td>
                             </tr>
                             <tr>
                                 <td>Analysis Code</td>
-                                <td>GitHub Repository</td>
+                                <td className="text-justify">GitHub Repository</td>
                                 <td>MIT</td>
-                                <td>Author (2025). Honeypot Analysis Toolkit</td>
-                                <td>github.com/username/honeypot-research</td>
+                                <td className="text-justify">Author (2025). Honeypot Analysis Toolkit</td>
+                                <td className="text-justify">github.com/username/honeypot-research</td>
                             </tr>
                             <tr>
                                 <td>Deployment Scripts</td>
-                                <td>GitHub Repository</td>
+                                <td className="text-justify">GitHub Repository</td>
                                 <td>MIT</td>
-                                <td>Author (2025). Honeypot Deployment Framework</td>
-                                <td>github.com/username/honeypot-deploy</td>
+                                <td className="text-justify">Author (2025). Honeypot Deployment Framework</td>
+                                <td className="text-justify">github.com/username/honeypot-deploy</td>
                             </tr>
                             <tr>
                                 <td>YARA Rules</td>
-                                <td>GitHub Gist</td>
+                                <td className="text-justify">GitHub Gist</td>
                                 <td>Apache 2.0</td>
-                                <td>Author (2025). Malware Detection Rules</td>
-                                <td>gist.github.com/username/yara-rules</td>
+                                <td className="text-justify">Author (2025). Malware Detection Rules</td>
+                                <td className="text-justify">gist.github.com/username/yara-rules</td>
                             </tr>
                             <tr>
                                 <td>Technical Paper</td>
-                                <td>arXiv Preprint</td>
+                                <td className="text-justify">arXiv Preprint</td>
                                 <td>CC BY-SA 4.0</td>
-                                <td>Author (2025). "Systematic Honeypot Analysis..."</td>
-                                <td>arxiv.org/abs/2504.12345</td>
+                                <td className="text-justify">Author (2025). "Systematic Honeypot Analysis..."</td>
+                                <td className="text-justify">arxiv.org/abs/2504.12345</td>
                             </tr>
                         </tbody>
                     </table>
@@ -364,41 +455,41 @@ export default function Conclusion() {
                         <div className="card">
                             <h4>Academic Contributions</h4>
                             <ul className="styled-list">
-                                <li>Validated hypotheses about attack patterns</li>
-                                <li>Developed novel analysis methodologies</li>
-                                <li>Created reproducible research framework</li>
-                                <li>Identified gaps in current threat intelligence</li>
+                                <li className="text-justify">Validated hypotheses about attack patterns</li>
+                                <li className="text-justify">Developed novel analysis methodologies</li>
+                                <li className="text-justify">Created reproducible research framework</li>
+                                <li className="text-justify">Identified gaps in current threat intelligence</li>
                             </ul>
                         </div>
 
                         <div className="card">
                             <h4>Practical Contributions</h4>
                             <ul className="styled-list">
-                                <li>102 novel IoCs for community defense</li>
-                                <li>Open-source deployment framework</li>
-                                <li>Actionable security recommendations</li>
-                                <li>Validated detection methods</li>
+                                <li className="text-justify">102 novel IoCs for community defense</li>
+                                <li className="text-justify">Open-source deployment framework</li>
+                                <li className="text-justify">Actionable security recommendations</li>
+                                <li className="text-justify">Validated detection methods</li>
                             </ul>
                         </div>
 
                         <div className="card">
                             <h4>Methodological Contributions</h4>
                             <ul className="styled-list">
-                                <li>Statistical validation framework</li>
-                                <li>Reproducibility standards</li>
-                                <li>Ethical research guidelines</li>
-                                <li>Open science practices</li>
+                                <li className="text-justify">Statistical validation framework</li>
+                                <li className="text-justify">Reproducibility standards</li>
+                                <li className="text-justify">Ethical research guidelines</li>
+                                <li className="text-justify">Open science practices</li>
                             </ul>
                         </div>
                     </div>
 
                     <div className="note mt-6">
-                        <div className="note-content">
+                        <div className="note-content text-justify">
                             <strong>Final Statement:</strong> This research demonstrates the critical value of systematic honeypot
                             deployment and analysis in understanding contemporary cyber threats. The findings provide both immediate
                             defensive value and a foundation for future research in adaptive cyber defense systems.
 
-                            <p className="mt-4">
+                            <p className="mt-4 text-justify">
                                 <em>"The only truly secure system is one that is powered off, cast in a block of concrete,
                                     and sealed in a lead-lined room with armed guards — and even then I have my doubts."</em>
                                 <br />
