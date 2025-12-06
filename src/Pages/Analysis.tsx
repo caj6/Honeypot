@@ -1,5 +1,4 @@
-// Pages/Analysis.tsx
-import { BarChart3, PieChart, Map, Cpu, AlertTriangle, Activity, Shield, Database } from 'lucide-react';
+import { BarChart3, Map, Cpu, AlertTriangle, Activity, Shield, Database } from 'lucide-react';
 
 export default function Analysis() {
     return (

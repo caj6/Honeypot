@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
+import Header from './Components/Header';
+import Sidebar from './Components/Sidebar';
 import Footer from './Components/Footer';
-import Navbar from './Components/Navbar'
 import Home from './Pages/Home';
 import Introduction from './Pages/Introduction';
 import StateOfArt from './Pages/StateOfArt';
@@ -14,8 +15,11 @@ import References from './Pages/References';
 export default function HoneypotProject() {
   return (
     <Router>
-      <div className="min-h-screen bg-slate-900 text-slate-200">
+      <div className="hp-root">
+        <div className="hp-wrap">
+          <Header />
           <main>
+            <div className="content">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/introduction" element={<Introduction />} />
@@ -26,9 +30,12 @@ export default function HoneypotProject() {
                 <Route path="/conclusion" element={<Conclusion />} />
                 <Route path="/references" element={<References />} />
               </Routes>
+            </div>
+            <Sidebar />
           </main>
-          <Footer/>
+          <Footer />
         </div>
+      </div>
     </Router>
   );
 }
