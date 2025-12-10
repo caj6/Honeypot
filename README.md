@@ -1,4 +1,4 @@
-# Honeypot Cybersecurity Research Project
+# Honeypot Research Project
 
 ## 📋 Project Overview
 A comprehensive cybersecurity research project that systematically deploys and analyzes multiple honeypot architectures to capture and examine contemporary cyber threats in controlled environments. This empirical study investigates attack patterns, malware propagation methods, and attacker behaviors across various network protocols.
